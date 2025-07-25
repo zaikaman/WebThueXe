@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 const BannerSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

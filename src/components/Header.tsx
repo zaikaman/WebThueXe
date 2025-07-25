@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,11 +27,11 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <div className="bg-blue-900 text-white px-3 py-2 lg:px-4 lg:py-2 rounded-lg font-bold text-sm lg:text-lg">
                   THUÊ XE LIÊN TỈNH 24H
                 </div>
-              </a>
+              </Link>
             </div>
 
             {/* Right side: Menu button + CTA button */}
@@ -113,14 +113,14 @@ const Header = () => {
         <div className="flex-1 overflow-y-auto">
           <nav className="p-4">
             {menuItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.href}
                 className="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 last:border-b-0 transition-colors"
                 onClick={toggleSidebar}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
